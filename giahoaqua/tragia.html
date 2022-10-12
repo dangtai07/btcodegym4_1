@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<h1>  Gia Hoa Qua  </h1>
+<input type="text" id="txt">
+<button onclick="check()">xem gia</button>
+<h3 id="td">  </h3>
+<body>
+    <script>
+        function check(){
+            let a = document.getElementById('txt').value;
+            let resut = '';
+            if (a == 'oi'){
+                resut = '20000 vnd/kg';
+            }
+            if (a == 'dua hau'){
+                resut = '20000 vnd/kg';
+            }
+            if (a == 'tao'){
+                resut = '30000 vnd/kg';
+            }
+            if (a == 'xoai'){
+                resut = '30000 vnd/kg';
+            }
+            if (a == 'cam'){
+                resut = '40000 vnd/kg';
+            }
+            if (a == 'chom chom'){
+                resut = '40000 vnd/kg';
+            }
+            if (a == 'mang cut'){
+                resut = '50000 vnd/kg';
+            }
+            document.getElementById('td').innerHTML= resut;
+
+        }
+    </script>
+</body>
+</html>
