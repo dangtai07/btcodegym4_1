@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1> Tinh Diem Dai Hoc Khoi D</h1>
+    <p> Mon Toan <input type="text" id="toan"></p>
+    <p> Mon Van <input type="text" id="van"></p>
+    <p> Mon Anh <input type="text" id="anh"></p>
+    <div>
+        Khu Vuc
+        <select id="kv">
+            <option value="kv1"> kv1</option>
+            <option value="kv2"> kv2</option>
+            <option value="kv2-NT"> kv2-NT</option>
+            <option value="kv3"> kv3</option>
+        </select>
+    </div>
+    <button onclick="tinh()"> tinh diem</button>
+    <h2 id="1" style="color: red;"></h2>
+    <script>
+        function tinh() {
+            let M = +document.getElementById('toan').value;
+            let L = +document.getElementById('van').value;
+            let A = +document.getElementById('anh').value;
+            let x = document.getElementById('kv').value;
+            let k = M + L + A;
+            switch (x) {
+                case 'kv1':
+                    k += 0.75;
+                    break;
+                case 'kv2':
+                    k += 0.25;
+                    break;
+                case 'kv2-NT':
+                    k += 0.5;
+                    break;
+            }
+            document.getElementById('1').innerHTML = 'Tong diem DH khoi D cua ban la ' + k;
+
+
+        }
+    </script>
+</body>
+
+</html>
